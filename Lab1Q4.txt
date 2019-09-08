@@ -1,0 +1,59 @@
+using System;
+
+public class Student
+{
+     
+    private int _rollNumber;
+    private string _studentName;
+    private byte age;
+    private char _gender;
+    private DateTime _dob;
+    private string _address;
+    private float _percentage;
+
+    public int RollNumber { get => _rollNumber; set => _rollNumber = value; }
+    public string StudentName { get => _studentName; set => _studentName = value; }
+    public byte Age { get => age; set => age = value; }
+    public char Gender { get => _gender; set => _gender = value; }
+    public DateTime Dob { get => _dob; set => _dob = value; }
+    public string Address { get => _address; set => _address = value; }
+    public float Percentage { get => _percentage; set => _percentage = value; }
+
+    
+}
+public class Program
+{
+    static void Main()
+    {
+        Student student = new Student();
+        Console.WriteLine("Enter Roll No.");
+        student.RollNumber = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter StudentName");
+        student.StudentName = Console.ReadLine();
+        Console.WriteLine("Enter Age.");
+        student.Age = byte.Parse(Console.ReadLine());
+        Console.WriteLine("Enter Gender");
+        student.Gender = char.Parse(Console.ReadLine());
+        Console.WriteLine("Enter Dob.");
+        student.Dob = DateTime.Parse(Console.ReadLine());
+        Console.WriteLine("Enter Address");
+        student.Address = Console.ReadLine();
+        Console.WriteLine("Enter Percentage");
+        student.Percentage = float.Parse(Console.ReadLine());
+
+        Console.WriteLine("Student Name = " + student.StudentName);
+        Console.WriteLine("Student RollNo = " + student.RollNumber);
+        Console.WriteLine("Student Age = " + student.Age);
+        Console.WriteLine("Student Gender = " + student.Gender);
+        Console.WriteLine("Student Dob = " + student.Dob);
+        Console.WriteLine("Student Address = " + student.Address);
+        Console.WriteLine("Student Percentage = " + student.Percentage);
+
+    }
+}
+
+    
+
+
+
+
