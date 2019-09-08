@@ -1,0 +1,83 @@
+using System;
+
+
+namespace Labwork
+{
+
+    class Employee
+    {
+
+        private string _employeeId;
+        private string _employeeName;
+        private string _employeeCity;
+        private string _employeeAddress;
+        private string _department;
+        private string _salary;
+
+        public string EmployeeName { get => _employeeName; set => _employeeName = value; }
+        public string EmployeeId { get => _employeeId; set => _employeeId = value; }
+        public string EmployeeCity { get => _employeeCity; set => _employeeCity = value; }
+        public string EmployeeAddress { get => _employeeAddress; set => _employeeAddress = value; }
+        public string Department { get => _department; set => _department = value; }
+        public string Salary { get => _salary; set => _salary = value; }
+    }
+    class Program
+    {
+        static void Main()
+        {
+            int[,] Emparray = new int[10, 6];
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Customer "+ (i+1));
+                for (int j = 0; j < 6; j++)
+                {
+
+                    Console.WriteLine("Enter Employee Id");
+                    Emparray[i, j] = int.Parse(Console.ReadLine());
+                    j++;
+                    Console.WriteLine("Enter Employee Name");
+                    Emparray[i, j ] = int.Parse(Console.ReadLine());
+                    j++;
+                    Console.WriteLine("Enter Employee City");
+                    Emparray[i, j ] = int.Parse(Console.ReadLine());
+                    j++;
+                    Console.WriteLine("Enter Employee Address");
+                    Emparray[i, j ] = int.Parse(Console.ReadLine());
+                    j++;
+                    Console.WriteLine("Enter Employee Dept");
+                    Emparray[i, j ] = int.Parse(Console.ReadLine());
+                    j++;
+                    Console.WriteLine("Enter Employee Salary");
+                    Emparray[i, j] = int.Parse(Console.ReadLine());
+                    Console.WriteLine("-------------------------");
+
+                }
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Customer "+(i+1));
+                for (int j = 0; j < 6; j++)
+                {
+
+                    Console.WriteLine("Employee Id= " + Emparray[i, j]);
+                    j++;
+                    Console.WriteLine("Employee Name = " + Emparray[i, j]);
+                    j++;
+                    Console.WriteLine(" Employee City = "+ Emparray[i, j ]);
+                    j++;
+                    Console.WriteLine("Employee Address = "+ Emparray[i, j ]);
+                    j++;
+                    Console.WriteLine("Employee Dept = "+ Emparray[i, j ]);
+                    j++;
+                    Console.WriteLine("Employee Salary = "+ Emparray[i,j]);
+                    j++;
+                    Console.WriteLine("-------------------------");
+
+
+                }
+            }
+
+
+        }
+    }
+}
