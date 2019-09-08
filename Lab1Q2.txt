@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+
+
+namespace Lab1Q2
+{
+    class ArithmeticOperations
+    {
+        static void Main()
+        {
+            int choice;
+            int first;
+            double second;
+            double answer;
+            Console.WriteLine(" Enter first number");
+            first = int.Parse(Console.ReadLine());
+            Console.WriteLine(" Enter second number");
+            second = double.Parse(Console.ReadLine());
+
+
+            Console.WriteLine("1. Add");
+            Console.WriteLine("2. Subtract");
+            Console.WriteLine("3. Multiply");
+            Console.WriteLine("4. Divide");
+            Console.WriteLine("5. Modulus");
+            Console.WriteLine("Enter your choice (1-5): ");
+
+            choice = int.Parse(Console.ReadLine());
+            if(choice==1)
+            {
+                answer = first + second;
+                Console.WriteLine("Result =" +answer);
+            }
+            else if (choice == 2)
+            {
+                answer = first - second;
+                Console.WriteLine("Result =" + answer);
+            }
+            else if (choice == 3)
+            {
+                answer = first * second;
+                Console.WriteLine("Result =" + answer);
+            }
+            else if (choice == 4)
+            {
+                answer = first / second;
+                Console.WriteLine("Result =" + answer);
+            }
+            else if (choice == 5)
+            {
+                answer = first % second;
+                Console.WriteLine("Result =" + answer);
+            }
+            else
+            {
+                Console.WriteLine("Wrong Choice");
+            }
+
+
+        }
+
+    }
+}
