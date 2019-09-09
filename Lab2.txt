@@ -5,6 +5,7 @@ public class Program
 {
     static void Main()
     {
+        //task1
         //int choice;
         //StructEx structEx = new StructEx();
         //Console.WriteLine("Enter a number");
@@ -46,48 +47,136 @@ public class Program
         //}
 
         //task3
-        string[] arrayexp = new string[5];
-        for (int i = 0; i < 5; i++)
+        //string[] arrayexp = new string[5];
+        //for (int i = 0; i < 5; i++)
+        //{
+        //    Console.WriteLine("Enter the city ");
+        //    arrayexp[i] = Console.ReadLine();
+
+        //}
+        //for (int i = 0; i < 5; i++)
+        //{
+        //    Console.WriteLine(" Cities are " + arrayexp[i]);
+
+        //}
+
+
+        //task 4
+        //ProductDemo productDemo = new ProductDemo();
+        //Console.WriteLine("Enter Product Id");
+        //productDemo.ProductId = int.Parse(Console.ReadLine());
+        //Console.WriteLine("Enter Product Name");
+        //productDemo.ProductName = Console.ReadLine();
+        //Console.WriteLine("Enter Product Price");
+        //productDemo.Price = int.Parse(Console.ReadLine());
+        //Console.WriteLine("Enter Product Quantity");
+        //productDemo.Quantity = int.Parse(Console.ReadLine());
+
+
+        //Console.WriteLine("Product Id = " + productDemo.ProductId);
+        //Console.WriteLine("Product Name = " + productDemo.ProductName);
+        //Console.WriteLine("Product Price = " + productDemo.Price);
+        //Console.WriteLine("Product Quantity = " + productDemo.Quantity);
+        //Console.WriteLine("Product Id = " + productDemo.GetAmount());
+
+        //task5
+        string[,] Emparray = new string[2, 4];
+        for (int i = 0; i < 2; i++)
         {
-            Console.WriteLine("Enter the city " );
-            arrayexp[i] = Console.ReadLine();
-            
+            Console.WriteLine("Book " + (i + 1));
+            for (int j = 0; j < 4; j++)
+            {
+
+                Console.WriteLine("Enter Title");
+                Emparray[i, j] = Console.ReadLine();
+                j++;
+                Console.WriteLine("Enter  Author");
+                Emparray[i, j] = Console.ReadLine();
+                j++;
+                Console.WriteLine("Enter Publisher");
+                Emparray[i, j] = Console.ReadLine();
+                j++;
+
+                Console.WriteLine("Enter Price");
+                Emparray[i, j] = Console.ReadLine();
+                j++;
+
+                Console.WriteLine("-------------------------");
+
+            }
         }
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 2; i++)
         {
-            Console.WriteLine(" Cities are " + arrayexp[i]);
-           
+            Console.WriteLine("Book " + (i + 1));
+            for (int j = 0; j < 4; j++)
+            {
+
+                Console.WriteLine("Book Title= " + Emparray[i, j]);
+                j++;
+                Console.WriteLine("Book Author = " + Emparray[i, j]);
+                j++;
+                Console.WriteLine(" Book Publisher = " + Emparray[i, j]);
+                j++;
+                Console.WriteLine("Book Price = " + Emparray[i, j]);
+                j++;
+
+                Console.WriteLine("-------------------------");
+
+
+            }
+
         }
-
     }
-
-}   
-
-public struct StructEx
-{
-    private int _number;
-    private int _cubeNumber;
-    private int _squareNumber;
-
-    public int Number { get => _number; set => _number = value; }
-    public int CubeNumber { get => _cubeNumber; set => _cubeNumber = value; }
-    public int SquareNumber { get => _squareNumber; set => _squareNumber = value; }
-
-    public int Square()
-    {
-        return (Number*Number);
-
-    }
-    public int Cube()
-    {
-        return (Number*Number*Number);
-
-    }
-
-
-
-
-
-
-
 }
+    //task1
+    //public struct StructEx
+    //{
+    //    private int _number;
+    //    private int _cubeNumber;
+    //    private int _squareNumber;
+
+    //    public int Number { get => _number; set => _number = value; }
+    //    public int CubeNumber { get => _cubeNumber; set => _cubeNumber = value; }
+    //    public int SquareNumber { get => _squareNumber; set => _squareNumber = value; }
+
+    //    public int Square()
+    //    {
+    //        return (Number * Number);
+
+    //    }
+    //    public int Cube()
+    //    {
+    //        return (Number * Number * Number);
+
+    //    }
+
+
+
+    //}
+
+    //task4
+    public class ProductDemo
+    {
+        private int _productId;
+        private string _ProductName;
+        private int _price;
+        private int _quantity;
+        private int _amount;
+
+        public int ProductId { get => _productId; set => _productId = value; }
+        public string ProductName { get => _ProductName; set => _ProductName = value; }
+        public int Price { get => _price; set => _price = value; }
+        public int Quantity { get => _quantity; set => _quantity = value; }
+        public int Amount { get => _amount; set => _amount = value; }
+
+        public int GetAmount()
+        {
+            Amount = Price * Quantity;
+            return Amount;
+        }
+    }
+
+//public class BooksDemo
+//{
+
+//}
